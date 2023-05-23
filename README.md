@@ -42,7 +42,7 @@ jobs:
           go-version: '>=1.18.0'
 
       - name: Run snapshot action
-        uses: actions/submit-go-dependency@v1
+        uses: nextlinux/submit-go-dependency@v1
         with:
           # Required: Define the repo path to the go.mod file used by the
           # build target
