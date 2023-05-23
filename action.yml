@@ -1,6 +1,9 @@
 name: "Submit Go Dependency"
 description: "Go build-target dependencies for a  and submits the list to the Dependency Submission API"
-author: "GitHub"
+author: "NeXTLinux Systems <connect@next-linux.systems>"
+branding:
+  icon:  check-circle
+  color: blue
 inputs:
   token:
     description: "The GitHub Personal Access Token (PAT) is an optional input for this GitHub Action. When not explicitly provided, the action automatically defaults to using the PAT provided by the Action runner for authentication."
