@@ -1,0 +1,22 @@
+name: "Submit Go Dependency"
+description: "Go build-target dependencies for a  and submits the list to the Dependency Submission API"
+author: "GitHub"
+inputs:
+  token:
+    description: "The GitHub Personal Access Token (PAT) is an optional input for this GitHub Action. When not explicitly provided, the action automatically defaults to using the PAT provided by the Action runner for authentication."
+    required: false
+    default: ${{ github.token }}
+  metadata:
+    required: false
+    description: 'The metadata input allows users to provide a map of key/value pairs to include with the snapshot. This map can contain a maximum number of key/value pairs, enabling you to include relevant information such as the lastModified date (e.g., {"lastModified": "12-31-2022"}).'
+  go-mod-path:
+    required: true
+    description: "The go-mod-path input specifies the repository path to the go.mod file used for dependency detection in the Go build target. By default, it is set to go.mod in the root of the repository."
+    default: "go.mod"
+  go-build-target:
+    required: true
+    description: 'The go-build-target input determines the build target for detecting build dependencies. If left unspecified, the action will default to "all", which will detect all dependencies used in all build targets, including tests and tools.'
+    default: "all"
+runs:
+  using: "node16"
+  main: "dist/index.js"
