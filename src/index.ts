@@ -6,7 +6,7 @@ import {
   Snapshot,
   Manifest,
   submitSnapshot
-} from '@github/dependency-submission-toolkit'
+} from '@github/submit-go-dependency'
 
 import {
   processGoGraph,
@@ -79,8 +79,8 @@ async function main () {
 
   const snapshot = new Snapshot(
     {
-      name: 'actions/submit-go-dependency',
-      url: 'https://github.com/actions/submit-go-dependency',
+      name: 'nextlinux/submit-go-dependency',
+      url: 'https://github.com/nextlinux/submit-go-dependency',
       version: '0.0.1'
     },
     github.context,
